@@ -1,35 +1,40 @@
-# **Olist Database Analysis**
+# **Olist Veritabanı Analizi**
 
 ![entity_olist](olist_entity.svg)
 
-### **About**
+### **Hakkında**
 
-*`Olist` is Brazil's largest department store connecting small businesses from all over Brazil.
-The data includes 100K orders from the period between Oct-2016 to Oct-2018. The database includes information
-about orders associated with customers sellers their payment methods products and locations.*
+*`Olist` Brezilya'nın en büyük mağazası olup, Brezilya'nın her yerinden küçük işletmeleri birbirine bağlar.
+Veri, Ekim 2016 ile Ekim 2018 arasındaki dönemden 100K sipariş içerir. Veritabanı siparişler, müşteriler, 
+satıcılar, ödeme yöntemleri, ürünler ve konumlar hakkında bilgiler içerir.*
 
-*The dataset is available at Kaggle on this [link](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?select=product_category_name_translation.csv)*
+*Veri seti Kaggle'da bu [bağlantıda](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?select=product_category_name_translation.csv) mevcuttur*
 
-*In this project, first we construct database from scratch then we perform an in-depth `analysis` of customer sellers and their orders and gain some critical `insights`
-about the orders volume, delivery time, valuable customer markets, important sellers by revenue, etc using `PostgreSQL`*
+*Bu projede, önce veritabanını sıfırdan oluşturduk, ardından müşteri, satıcı ve siparişleri derinlemesine `analiz` ettik ve 
+sipariş hacmi, teslimat süresi, değerli müşteri pazarları, gelir açısından önemli satıcılar vb. hakkında önemli `içgörüler` 
+elde ettik ve `PostgreSQL` kullandık*
 
-*We perform analysis on four major categories of data provided by Olist*
+*Olist tarafından sağlanan dört ana veri kategorisinde analiz gerçekleştirdik*
 
-|   **Analysis**|   **Markdown**|   **Notebook**|
+|   **Analiz**|   **Markdown**|   **Notebook**|
 |---|---|---|
-|   Frequency of Orders| [md](Frequency_analysis_of_orders/)   | [notebook](Frequency_analysis_of_orders/Frequency_analysis_of_orders.ipynb)  |
-|   Customers| [md](Customer_analysis)  | [notebook](Customer_analysis/Customer_analysis.ipynb)  |
-|   Sellers|[md](Seller_analysis/)   | [notebook](Seller_analysis/Seller_analysis.ipynb)  |
-|   Products| [md](Product_analysis/)  |[notebook](Product_analysis/Product_Analysis.ipynb)|
-|   Miscelleaneous| [md](Miscellaneous/)  |[notebook](Miscellaneous/Miscellaneous.ipynb)   |
+|   Siparişlerin Sıklığı| [md](Frequency_analysis_of_orders/)   | [notebook](Frequency_analysis_of_orders/Frequency_analysis_of_orders.ipynb)  |
+|   Müşteriler| [md](Customer_analysis)  | [notebook](Customer_analysis/Customer_analysis.ipynb)  |
+|   Satıcılar|[md](Seller_analysis/)   | [notebook](Seller_analysis/Seller_analysis.ipynb)  |
+|   Ürünler| [md](Product_analysis/)  |[notebook](Product_analysis/Product_Analysis.ipynb)|
+|   Çeşitli| [md](Miscellaneous/)  |[notebook](Miscellaneous/Miscellaneous.ipynb)   |
 
-### **How to use the database**
+### **Veritabanı Nasıl Kullanılır**
 
-1. Install postgreSQL and pgAdmin4
-2. Clone the repo or download the zipfile and extract it.
-3. open pdAdmin4 go to Server > LOCAL, Right click and CREATE and enter the database name olist
-4. Go to olist database again right click and open Query tools
-5. Click the folder icon go to the downloaded folder and open `create_table.sql` , select the entire file and execute it, this will make all required tables
-6. Again go to the folder and open `import_data.sql` , replace all path with your downloaded path inside your computer
-7. Select all code and execute it, this will import all data
-8. Plug and play with the queries or do your own analysis
+1. PostgreSQL ve pgAdmin4'ü yükleyin
+2. Depoyu klonlayın
+3. CSV dosyalarını [buradan](curl -L "https://d32aokrjazspmn.cloudfront.net/materials/olist.zip") indirin ve `olist_data/` klasörü içine açın
+4. pgAdmin4'ü açın, Server > LOCAL öğesine gidin, sağ tıklayın ve CREATE'i seçin, veritabanı adını `olist` olarak girin
+5. Olist veritabanına tekrar gidin, sağ tıklayın ve Query Tool'u açın
+6. Klasör simgesine tıklayın, indirilen klasöre gidin ve `create_table.sql` dosyasını açın, tüm dosyayı seçin ve çalıştırın, bu gerekli tüm tabloları oluşturacaktır
+7. Tekrar klasöre gidin ve `import_data.sql` dosyasını açın, tüm yolları bilgisayarınızdaki indirilen yolla değiştirin
+8. Tüm kodu seçin ve çalıştırın, bu tüm verileri içe aktaracaktır
+9. Sorgularla oynayın veya kendi analizinizi yapın
+
+### **Analizler Nasıl Oluşturulur**
+Başlamak için `Frequency_analysis_of_orders.ipynb` dosyasına bakarak ilham alabilirsiniz!
